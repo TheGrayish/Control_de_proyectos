@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Main;
 use Illuminate\Http\Request;
 
+use App\Models\User;
+use Spatie\Permission\Models\Role;
+
 class MainController extends Controller
 {
     /**
@@ -12,6 +15,24 @@ class MainController extends Controller
      */
     public function index()
     {
+        // Verifica si el rol 'admin' ya existe para el guard 'web'
+        if (!Role::where('name', 'admin')->where('guard_name', 'web')->exists()) {
+            // Si el rol no existe, créalo
+            $role_admin = Role::create(['name' => 'admin', 'guard_name' => 'web']);
+        }
+
+        // Verifica si el rol 'cliente' ya existe para el guard 'web'
+        if (!Role::where('name', 'cliente')->where('guard_name', 'web')->exists()) {
+            // Si el rol no existe, créalo
+            $role_cliente = Role::create(['name' => 'cliente', 'guard_name' => 'web']);
+        }
+
+        // Encuentra al usuario por su ID (puedes ajustar esto según tu lógica)
+        $user_kevin = User::find(1);
+
+        // Asigna el rol 'cliente' al usuario
+        $user_kevin->assignRole('admin');
+        
         return view('Main_index');
         
     }

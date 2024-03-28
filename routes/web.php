@@ -14,11 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware(['role:admin'])->group(function () {
+
+    Route::resource('main', MainController::class);
+});
+
+
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('main', MainController::class);
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

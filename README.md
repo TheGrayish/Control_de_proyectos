@@ -7,6 +7,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Pasos de instalacion
+### Instalar Dependencias
+Comando de instalacion de dependencias
+- npm i 
+
+### Instalar Spatie
+Comando de instalacion de Spatie:
+
+- composer require spatie/laravel-permission
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

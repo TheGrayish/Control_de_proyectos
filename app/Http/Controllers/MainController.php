@@ -15,6 +15,9 @@ class MainController extends Controller
      */
     public function index()
     {
+
+        $archivos = Main::all();
+
         // Verifica si el rol 'admin' ya existe para el guard 'web'
         if (!Role::where('name', 'admin')->where('guard_name', 'web')->exists()) {
             // Si el rol no existe, créalo
@@ -33,7 +36,7 @@ class MainController extends Controller
         // Asigna el rol 'cliente' al usuario
         $user_kevin->assignRole('admin');
         
-        return view('Main_index');
+        return view('Main_index', ['archivos' => $archivos]);
         
     }
 
@@ -42,7 +45,7 @@ class MainController extends Controller
      */
     public function create()
     {
-        //
+        return view('Create_Main');
     }
 
     /**
@@ -50,7 +53,17 @@ class MainController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'archivo' => 'required|string',
+            'horario' => 'required|string',
+            'materia' => 'required|string',
+            'profesor' => 'required|string',
+            'descripcion' => 'required|string',
+        ]);
+
+        Main::create($request->all());
+        return redirect()->route('main.index')->with('success', 'Archivo creado correctamente.');
+   
     }
 
     /**
@@ -58,7 +71,7 @@ class MainController extends Controller
      */
     public function show(Main $main)
     {
-        //
+        return view('Show_Main',['main' => $main]);
     }
 
     /**
@@ -66,7 +79,7 @@ class MainController extends Controller
      */
     public function edit(Main $main)
     {
-        //
+        return view('Create_Main',['main' => $main]);
     }
 
     /**
@@ -74,7 +87,17 @@ class MainController extends Controller
      */
     public function update(Request $request, Main $main)
     {
-        //
+        $request->validate([
+            'archivo' => 'required|string',
+            'horario' => 'required|string',
+            'materia' => 'required|string',
+            'profesor' => 'required|string',
+            'descripcion' => 'required|string',
+        ]);
+
+        $main->update($request->all());
+        return redirect()->route('main.index')->with('success', 'Archivo actualizado correctamente.');
+   
     }
 
     /**
@@ -82,6 +105,8 @@ class MainController extends Controller
      */
     public function destroy(Main $main)
     {
-        //
+        $main->delete();
+        return redirect()->route('main.index')->with('success', 'Archivo eliminado correctamente.');
+   
     }
 }

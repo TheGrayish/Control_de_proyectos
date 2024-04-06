@@ -14,7 +14,7 @@
             @method('PUT')
             <div class="form-group">
                 <label for="archivo">Archivo:</label>
-                <input type="text" class="form-control" id="archivo" name="archivo" value="{{ $main->archivo }}" required>
+                <input type="file" class="form-control" id="archivo" name="archivo" value="{{ $main->archivo }}" required>
             </div>
             <div class="form-group">
                 <label for="horario">Horario:</label>

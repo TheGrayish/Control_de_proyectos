@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('profesor');
             $table->string('descripcion');
             
-           //$table->timestamps();
+            $table->timestamps();
         });
     }
 

@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Subir Un Nuevo Archivo</title>
 </head>
 <body>
     <div class="container">
         <h2>Subir Un Nuevo Archivo</h2>
-        <form action="{{ route('main.store') }}" method="POST">
+        <form action="{{ route('main.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="archivo">Archivo:</label>
-                <input type="text" class="form-control" id="archivo" name="archivo" required>
+                <input type="file" class="form-control" id="archivo" name="archivo" required>
             </div>
             <div class="form-group">
                 <label for="horario">Horario:</label>

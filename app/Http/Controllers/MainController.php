@@ -54,16 +54,29 @@ class MainController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'archivo' => 'required|string',
+            'archivo' => 'required|file',
             'horario' => 'required|string',
             'materia' => 'required|string',
             'profesor' => 'required|string',
             'descripcion' => 'required|string',
         ]);
 
-        Main::create($request->all());
+        // Guarda el archivo en la carpeta de almacenamiento (en este caso, 'archivos')
+        $archivoPath = $request->file('archivo')->store('archivos');
+
+        // Crea una nueva instancia de Main con los datos del formulario
+        $main = new Main([
+            'archivo' => $archivoPath,
+            'horario' => $request->horario,
+            'materia' => $request->materia,
+            'profesor' => $request->profesor,
+            'descripcion' => $request->descripcion,
+        ]);
+
+        // Guarda el objeto Main en la base de datos
+        $main->save();
+
         return redirect()->route('main.index')->with('success', 'Archivo creado correctamente.');
-   
     }
 
     /**
@@ -79,7 +92,7 @@ class MainController extends Controller
      */
     public function edit(Main $main)
     {
-        return view('Create_Main',['main' => $main]);
+        return view('Edit_Main',['main' => $main]);
     }
 
     /**
@@ -109,4 +122,5 @@ class MainController extends Controller
         return redirect()->route('main.index')->with('success', 'Archivo eliminado correctamente.');
    
     }
+
 }

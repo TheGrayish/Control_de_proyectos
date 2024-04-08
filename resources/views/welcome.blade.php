@@ -75,7 +75,7 @@
         <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
         <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
         <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
-        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+
          @if (Route::has('login'))
 
                 @auth
@@ -127,7 +127,7 @@
     </div>
   </header>
   
-  <!-- Central Files Section -->
+  {{-- <!-- Central Files Section -->
   <section class="central-files">
       <h2 class="w3-center">Principales archivos</h2>
       <div class="file-preview">
@@ -143,32 +143,28 @@
         <!-- Add more file previews as needed -->
       </div>
     </section>
-  
+   --}}
   
   <!-- About Section -->
   <div class="w3-container" style="padding:128px 16px" id="about">
-    <h3 class="w3-center">ABOUT THE COMPANY</h3>
-    <p class="w3-center w3-large">Key features of our company</p>
+    <h3 class="w3-center">ACERCA DE LA EMPRESA</h3>
+    <p class="w3-center w3-large">VALORES</p>
     <div class="w3-row-padding w3-center" style="margin-top:64px">
       <div class="w3-quarter">
         <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-        <p class="w3-large">Responsive</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large">Responsabilidad</p>
       </div>
       <div class="w3-quarter">
         <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-        <p class="w3-large">Passion</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large">Fidelidad</p>
       </div>
       <div class="w3-quarter">
         <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-        <p class="w3-large">Design</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large">Creatividad</p>
       </div>
       <div class="w3-quarter">
         <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-        <p class="w3-large">Support</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+        <p class="w3-large">Confianza</p>
       </div>
     </div>
   </div>
@@ -189,14 +185,14 @@
   
   <!-- Team Section -->
   <div class="w3-container" style="padding:128px 16px" id="team">
-    <h3 class="w3-center">THE TEAM</h3>
-    <p class="w3-center w3-large">The ones who runs this company</p>
+    <h3 class="w3-center">EL EQUIPO</h3>
+    <p class="w3-center w3-large">Las principales caras de la empresa</p>
     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="/w3images/team2.jpg" alt="John" style="width:100%">
+          <img src="/w3images/team2.jpg" alt="Grayish" style="width:100%">
           <div class="w3-container">
-            <h3>John Doe</h3>
+            <h3>Abner Yezael Gomez Arellano</h3>
             <p class="w3-opacity">CEO & Founder</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
@@ -205,9 +201,9 @@
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+          <img src="/w3images/team1.jpg" alt="Guada" style="width:100%">
           <div class="w3-container">
-            <h3>Anja Doe</h3>
+            <h3>José Guadalupe Gutiérrez Navarro</h3>
             <p class="w3-opacity">Art Director</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
@@ -216,9 +212,9 @@
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+          <img src="/w3images/team3.jpg" alt="Huevo" style="width:100%">
           <div class="w3-container">
-            <h3>Mike Ross</h3>
+            <h3>Kevin Ramsés Ramírez Gómez</h3>
             <p class="w3-opacity">Web Designer</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
@@ -227,9 +223,20 @@
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="/w3images/team4.jpg" alt="Dan" style="width:100%">
+          <img src="/w3images/team4.jpg" alt="BichoOne" style="width:100%">
           <div class="w3-container">
-            <h3>Dan Star</h3>
+            <h3>Oscar Gerónimo Murillo Alvarado</h3>
+            <p class="w3-opacity">Designer</p>
+            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-card">
+          <img src="/w3images/team4.jpg" alt="Kevo" style="width:100%">
+          <div class="w3-container">
+            <h3>Kevin Shalom Herrera Covarrubias</h3>
             <p class="w3-opacity">Designer</p>
             <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
@@ -239,7 +246,7 @@
     </div>
   </div>
   
-  <!-- Promo Section "Statistics" -->
+  {{-- <!-- Promo Section "Statistics" -->
   <div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
     <div class="w3-quarter">
       <span class="w3-xxlarge">14+</span>
@@ -293,7 +300,7 @@
         <img src="/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
       </div>
     </div>
-  </div>
+  </div> --}}
   
   <!-- Modal for full size images on click-->
   <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -309,10 +316,252 @@
     <div class="w3-row-padding">
       <div class="w3-col m6">
         <h3>Our Skills.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-        tempor incididunt ut labore et dolore.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>
-        tempor incididunt ut labore et dolore.</p>
+        <p>N
+          o
+          s
+          d
+          e
+          d
+          i
+          c
+          a
+          m
+          o
+          s
+          a
+          
+          p
+          r
+          o
+          p
+          o
+          r
+          c
+          i
+          o
+          n
+          a
+          r
+          s
+          olu
+          c
+          i
+          o
+          n
+          e
+          s
+          
+          t
+          e
+          c
+          n
+          oló
+          g
+          i
+          c
+          a
+          s
+          i
+          n
+          n
+          o
+          v
+          a
+          d
+          o
+          r
+          a
+          s
+          ,
+          
+          e
+          s
+          p
+          e
+          c
+          i
+          ali
+          z
+          a
+          d
+          a
+          s
+          e
+          n
+          el desarrollo de program
+          a
+          s
+          
+          p
+          e
+          r
+          s
+          o
+          n
+          ali
+          z
+          a
+          d
+          o
+          s
+          p
+          a
+          r
+          a
+          
+          e
+          m
+          p
+          r
+          e
+          s
+          a
+          s
+          ,
+          i
+          n
+          d
+          i
+          v
+          i
+          d
+          u
+          o
+          s
+          y
+          
+          e
+          n
+          t
+          i
+          d
+          a
+          d
+          e
+          s
+          p
+          ú
+          bli
+          c
+          a
+          s
+          .
+          
+          N
+          u
+          e
+          s
+          t
+          r
+          a
+          m
+          i
+          s
+          i
+          ó
+          n
+          e
+          s
+          
+          i
+          m
+          p
+          uls
+          a
+          r
+          el p
+          r
+          o
+          g
+          r
+          e
+          s
+          o
+          
+          t
+          e
+          c
+          n
+          oló
+          g
+          i
+          c
+          o
+          ,
+          f
+          a
+          c
+          ili
+          t
+          a
+          n
+          d
+          o
+          
+          s
+          olu
+          c
+          i
+          o
+          n
+          e
+          s
+          q
+          u
+          e
+          
+          t
+          r
+          a
+          n
+          s
+          f
+          o
+          r
+          m
+          e
+          n
+          y
+          m
+          ej
+          o
+          r
+          e
+          n la
+          
+          e
+          x
+          p
+          e
+          r
+          i
+          e
+          n
+          c
+          i
+          a
+          d
+          i
+          g
+          i
+          t
+          al d
+          e
+          
+          n
+          u
+          e
+          s
+          t
+          r
+          o
+          s
+          cli
+          e
+          n
+          t
+          e
+          s</p>
       </div>
       <div class="w3-col m6">
         <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
@@ -387,30 +636,7 @@
     </div>
   </div>
   
-  <!-- Contact Section -->
-  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-    <h3 class="w3-center">CONTACT</h3>
-    <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-    <div style="margin-top:48px">
-      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Chicago, US</p>
-      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +00 151515</p>
-      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: mail@mail.com</p>
-      <br>
-      <form action="/action_page.php" target="_blank">
-        <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-        <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-        <p>
-          <button class="w3-button w3-black" type="submit">
-            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-          </button>
-        </p>
-      </form>
-      <!-- Image of location/map -->
-      <img src="/w3images/map.jpg" class="w3-image w3-greyscale" style="width:100%;margin-top:48px">
-    </div>
-  </div>
+ 
   
   <!-- Footer -->
   <footer class="w3-center w3-black w3-padding-64">
@@ -423,8 +649,7 @@
       <i class="fa fa-twitter w3-hover-opacity"></i>
       <i class="fa fa-linkedin w3-hover-opacity"></i>
     </div>
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
-  </footer>
+</footer>
    
   <script>
   // Modal Image Gallery

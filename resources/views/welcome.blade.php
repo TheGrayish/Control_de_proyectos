@@ -112,7 +112,7 @@
   <!-- Header with full-height image -->
   <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-white" style="padding:48px">
-      <span class="w3-jumbo w3-hide-small">Start something that matters</span><br>
+      <span class="w3-jumbo w3-hide-small">QCI-HUB</span><br>
       <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
       <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
       <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
@@ -173,13 +173,13 @@
   <div class="w3-container w3-light-grey" style="padding:128px 16px">
     <div class="w3-row-padding">
       <div class="w3-col m6">
-        <h3>We know design.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-        <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+        <h3>Nuestros archivos.</h3>
+        <p>Para pasar a los archivos clique el siguiente boton</p>
+        <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Archivos</a></p>
       </div>
-      <div class="w3-col m6">
+      {{-- <div class="w3-col m6">
         <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
-      </div>
+      </div> --}}
     </div>
   </div>
   
@@ -316,255 +316,12 @@
     <div class="w3-row-padding">
       <div class="w3-col m6">
         <h3>Our Skills.</h3>
-        <p>N
-          o
-          s
-          d
-          e
-          d
-          i
-          c
-          a
-          m
-          o
-          s
-          a
-          
-          p
-          r
-          o
-          p
-          o
-          r
-          c
-          i
-          o
-          n
-          a
-          r
-          s
-          olu
-          c
-          i
-          o
-          n
-          e
-          s
-          
-          t
-          e
-          c
-          n
-          oló
-          g
-          i
-          c
-          a
-          s
-          i
-          n
-          n
-          o
-          v
-          a
-          d
-          o
-          r
-          a
-          s
-          ,
-          
-          e
-          s
-          p
-          e
-          c
-          i
-          ali
-          z
-          a
-          d
-          a
-          s
-          e
-          n
-          el desarrollo de program
-          a
-          s
-          
-          p
-          e
-          r
-          s
-          o
-          n
-          ali
-          z
-          a
-          d
-          o
-          s
-          p
-          a
-          r
-          a
-          
-          e
-          m
-          p
-          r
-          e
-          s
-          a
-          s
-          ,
-          i
-          n
-          d
-          i
-          v
-          i
-          d
-          u
-          o
-          s
-          y
-          
-          e
-          n
-          t
-          i
-          d
-          a
-          d
-          e
-          s
-          p
-          ú
-          bli
-          c
-          a
-          s
-          .
-          
-          N
-          u
-          e
-          s
-          t
-          r
-          a
-          m
-          i
-          s
-          i
-          ó
-          n
-          e
-          s
-          
-          i
-          m
-          p
-          uls
-          a
-          r
-          el p
-          r
-          o
-          g
-          r
-          e
-          s
-          o
-          
-          t
-          e
-          c
-          n
-          oló
-          g
-          i
-          c
-          o
-          ,
-          f
-          a
-          c
-          ili
-          t
-          a
-          n
-          d
-          o
-          
-          s
-          olu
-          c
-          i
-          o
-          n
-          e
-          s
-          q
-          u
-          e
-          
-          t
-          r
-          a
-          n
-          s
-          f
-          o
-          r
-          m
-          e
-          n
-          y
-          m
-          ej
-          o
-          r
-          e
-          n la
-          
-          e
-          x
-          p
-          e
-          r
-          i
-          e
-          n
-          c
-          i
-          a
-          d
-          i
-          g
-          i
-          t
-          al d
-          e
-          
-          n
-          u
-          e
-          s
-          t
-          r
-          o
-          s
-          cli
-          e
-          n
-          t
-          e
-          s</p>
+        <p>
+          Nos dedicamos a proporcionar soluciones tecnologicas inovadoras, especializadas en el desarrollo de programas personalizados para empresas, individuos y entidades publicas. Nuestra misión es impulsar el progreso tecnológico, facilitando soluciones que transformen y mejoren la experiencias digital de nuestros clientes.
+        </p>
       </div>
       <div class="w3-col m6">
-        <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Photography</p>
+        <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Programation</p>
         <div class="w3-grey">
           <div class="w3-container w3-dark-grey w3-center" style="width:90%">90%</div>
         </div>
@@ -572,10 +329,10 @@
         <div class="w3-grey">
           <div class="w3-container w3-dark-grey w3-center" style="width:85%">85%</div>
         </div>
-        <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
+        {{-- <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Photoshop</p>
         <div class="w3-grey">
           <div class="w3-container w3-dark-grey w3-center" style="width:75%">75%</div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </div>

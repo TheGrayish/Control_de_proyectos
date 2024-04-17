@@ -13,7 +13,11 @@ class Main extends Model
      *
      * @var array
      */
+
+    public $timestamps = false;
+
     protected $fillable = [
+        'nombre',
         'archivo', // Agrega 'archivo' al array $fillable
         'horario',
         'materia',

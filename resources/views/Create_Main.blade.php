@@ -12,6 +12,10 @@
         <form action="{{ route('main.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
                 <label for="archivo">Archivo:</label>
                 <input type="file" class="form-control" id="archivo" name="archivo" required>
             </div>

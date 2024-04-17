@@ -54,6 +54,7 @@ class MainController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'nombre' => 'required|string',
             'archivo' => 'required|file',
             'horario' => 'required|string',
             'materia' => 'required|string',
@@ -61,12 +62,19 @@ class MainController extends Controller
             'descripcion' => 'required|string',
         ]);
 
-        // Guarda el archivo en la carpeta de almacenamiento (en este caso, 'archivos')
-        $archivoPath = $request->file('archivo')->store('archivos');
+        // Obtener la imagen del formulario
+        $imagen = $request->file('archivo');
+        $nombreImagen = time() . '_' . $imagen->getClientOriginalName();
+
+        // Guardar la imagen en la carpeta "storage/app/public/images"
+        $imagen->storeAs('public/images', $nombreImagen);
+
+   
 
         // Crea una nueva instancia de Main con los datos del formulario
         $main = new Main([
-            'archivo' => $archivoPath,
+            'nombre' => $request->nombre,
+            'archivo' => $nombreImagen,
             'horario' => $request->horario,
             'materia' => $request->materia,
             'profesor' => $request->profesor,

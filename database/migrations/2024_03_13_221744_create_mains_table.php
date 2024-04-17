@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('mains', function (Blueprint $table) {
             $table->id();
             $table->string('archivo');
+            $table->string('nombre');
             $table->string('horario');
             $table->string('materia');
             $table->string('profesor');

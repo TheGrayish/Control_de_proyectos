@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 use Spatie\Permission\Models\Role;
+use Illuminate\Support\Facades\Storage;
 
 class MainController extends Controller
 {
@@ -106,26 +107,54 @@ class MainController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Main $main)
-    {
-        $request->validate([
-            'archivo' => 'required|string',
-            'horario' => 'required|string',
-            'materia' => 'required|string',
-            'profesor' => 'required|string',
-            'descripcion' => 'required|string',
-        ]);
+    /**
+ * Update the specified resource in storage.
+ */
+public function update(Request $request, Main $main)
+{
+    $request->validate([
+        'nombre' => 'required|string',
+        'archivo' => 'file', // Cambiado a 'file' en lugar de 'string'
+        'horario' => 'required|string',
+        'materia' => 'required|string',
+        'profesor' => 'required|string',
+        'descripcion' => 'required|string',
+    ]);
 
-        $main->update($request->all());
-        return redirect()->route('main.index')->with('success', 'Archivo actualizado correctamente.');
-   
+    $main->nombre = $request->nombre;
+    $main->horario = $request->horario;
+    $main->materia = $request->materia;
+    $main->profesor = $request->profesor;
+    $main->descripcion = $request->descripcion;
+
+    if ($request->hasFile('archivo')) {
+        $archivo = $request->file('archivo');
+        $nombreImagen = time() . '_' . $archivo->getClientOriginalName();
+        $archivo->storeAs('public/images', $nombreImagen);
+
+        // Eliminar la imagen antigua si existe
+        if ($main->archivo) {
+            Storage::delete('public/images/' . $main->archivo);
+        }
+
+        $main->archivo = $nombreImagen; // Actualizar el nombre del archivo en el modelo
     }
+
+    $main->save(); // Guardar los cambios en el modelo
+
+    return redirect()->route('main.index')->with('success', 'Archivo actualizado correctamente.');
+}
+
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(Main $main)
     {
+        if ($main->archivo){
+            Storage::delete('public/images/' . $main->archivo);
+        }
+
         $main->delete();
         return redirect()->route('main.index')->with('success', 'Archivo eliminado correctamente.');
    

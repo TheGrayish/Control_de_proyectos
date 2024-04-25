@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Editar Archivo</title>
 </head>
 <body>
     <div class="container">
         <h2>Editar Archivo</h2>
-        <form action="{{ route('main.update', $main->id) }}" method="POST">
+        <form action="{{ route('main.update', $main->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{ $main->nombre }}" required>
+            </div>
+            <div class="form-group">
                 <label for="archivo">Archivo:</label>
-                <input type="file" class="form-control" id="archivo" name="archivo" value="{{ $main->archivo }}" required>
+                <input type="file" class="form-control" id="archivo" name="archivo" required>
             </div>
             <div class="form-group">
                 <label for="horario">Horario:</label>
@@ -35,6 +39,5 @@
             <button type="submit" class="btn btn-primary">Actualizar</button>
         </form>
     </div>
-
 </body>
 </html>

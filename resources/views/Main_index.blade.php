@@ -12,9 +12,13 @@
         @foreach($archivos as $archivo)
             <li>
                 {{ $archivo->nombre }}
-                <embed src="{{ asset('storage/images/' . $archivo->archivo) }}" type="application/pdf" width="600" height="400">
+                <embed src="{{ asset('storage/images/' . $archivo->archivo) }}" type="application/pdf" width="1000" height="500">
+                    <a href="{{ route('main.show', $archivo->id) }}">Ver</a>
             </li>
         @endforeach
     </ul>
+
+    <a href="{{ route('main.create') }}">Agregar Archivo</a>
+
 </body>
 </html>

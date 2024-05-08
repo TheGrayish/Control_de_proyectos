@@ -22,13 +22,13 @@
             .bgimg-1 {
               background-position: center;
               background-size: cover;
-              background-image: url("/w3images/mac.jpg");
-              background-color: black;
+              background-image: url("https://www.bhmpics.com/downloads/stunning-4k-wallpaper-/24.beeautiful-sunset-illustration-1212023.png.webp");
+              background-color: gray;
               min-height: 100%;
             }
             
             .w3-bar .w3-button {
-              padding: 16px;
+              padding: 5px;
             }
             
             /* Central Files Section */
@@ -65,7 +65,8 @@
         <!-- Navbar (sit on top) -->
 <div class="w3-top">
     <div class="w3-bar w3-white w3-card" id="myNavbar">
-      <a href="#home" class="w3-bar-item w3-button w3-wide">LOGO</a>
+      <img href="#home" class="w3-bar-item w3-button w3-wide" src="{{ asset('storage/images/CUCEIHUB.png') }}" alt="Imagen CUCEI-HUB" style="width: 100px; height: auto;">
+
 
        
  
@@ -73,7 +74,7 @@
       <div class="w3-right w3-hide-small">
         <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
         <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> ARCHIVOS</a>
         <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
 
          @if (Route::has('login'))
@@ -104,7 +105,7 @@
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
     <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
     <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">ARCHIVOS</a>
     <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
   </nav>
@@ -112,19 +113,19 @@
   <!-- Header with full-height image -->
   <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
     <div class="w3-display-left w3-text-white" style="padding:48px">
-      <span class="w3-jumbo w3-hide-small">QCI-HUB</span><br>
-      <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br>
-      <span class="w3-large">Stop wasting valuable time with projects that just isn't you.</span>
-      <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+      <span class="w3-jumbo w3-hide-small">CUCEI-HUB</span><br>
+      {{-- <span class="w3-xxlarge w3-hide-large w3-hide-medium">Start something that matters</span><br> --}}
+      <span class="w3-large">CUCEI-HUB es una plataforma para estudiantes, que nos servirá para darte un apoyo, en el cual estudiantes podrán subir sus trabajos, para que todos los puedan ver y asi puedas tener una nocion de lo que es el trabajo que realizaras</span>
+      <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Conoce mas acerca de nosotros</a></p>
     </div> 
-    <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    {{-- <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
       <i class="fa fa-facebook-official w3-hover-opacity"></i>
       <i class="fa fa-instagram w3-hover-opacity"></i>
       <i class="fa fa-snapchat w3-hover-opacity"></i>
       <i class="fa fa-pinterest-p w3-hover-opacity"></i>
       <i class="fa fa-twitter w3-hover-opacity"></i>
       <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
+    </div> --}}
   </header>
   
   {{-- <!-- Central Files Section -->
@@ -170,12 +171,13 @@
   </div>
   
   <!-- Promo Section - "We know design" -->
-  <div class="w3-container w3-light-grey" style="padding:128px 16px">
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="work">
     <div class="w3-row-padding">
       <div class="w3-col m6">
         <h3>Nuestros archivos.</h3>
+        <p>Ahora que conoce un poco mejor lo que es nuestra idea pasemos a mostrar los archivos </p>
         <p>Para pasar a los archivos clique el siguiente boton</p>
-        <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> Archivos</a></p>
+        <p><a href="/main" class="w3-button w3-black"><i class="fa fa-th"> </i> Archivos</a></p>
       </div>
       {{-- <div class="w3-col m6">
         <img class="w3-image w3-round-large" src="/w3images/phone_buildings.jpg" alt="Buildings" width="700" height="394">
@@ -190,7 +192,8 @@
     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="/w3images/team2.jpg" alt="Grayish" style="width:100%">
+          <img src="{{ asset('storage/images/Yezael.jpg') }}" alt="Grayish" style="width:100%; height: 300px;">
+
           <div class="w3-container">
             <h3>Abner Yezael Gomez Arellano</h3>
             <p class="w3-opacity">CEO & Founder</p>
@@ -201,7 +204,7 @@
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="/w3images/team1.jpg" alt="Guada" style="width:100%">
+          <img src="{{ asset('storage/images/anonimo.webp') }}" alt="Guada" style="width:100%; height: 300px;">
           <div class="w3-container">
             <h3>José Guadalupe Gutiérrez Navarro</h3>
             <p class="w3-opacity">Art Director</p>
@@ -212,7 +215,7 @@
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="/w3images/team3.jpg" alt="Huevo" style="width:100%">
+          <img src="{{ asset('storage/images/Huevo.jpg') }}" alt="Huevo" style="width:100%; height: 300px;">
           <div class="w3-container">
             <h3>Kevin Ramsés Ramírez Gómez</h3>
             <p class="w3-opacity">Web Designer</p>
@@ -223,7 +226,7 @@
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="/w3images/team4.jpg" alt="BichoOne" style="width:100%">
+          <img src="{{ asset('storage/images/Murillo.jpg') }}" alt="BichoOne" style="width:100%; height: 300px;">
           <div class="w3-container">
             <h3>Oscar Gerónimo Murillo Alvarado</h3>
             <p class="w3-opacity">Designer</p>
@@ -234,7 +237,7 @@
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="/w3images/team4.jpg" alt="Kevo" style="width:100%">
+          <img src="{{ asset('storage/images/anonimo.webp') }}" alt="KEVO" style="width:100%; height: 300px;">
           <div class="w3-container">
             <h3>Kevin Shalom Herrera Covarrubias</h3>
             <p class="w3-opacity">Designer</p>
@@ -404,7 +407,8 @@
       <i class="fa fa-snapchat w3-hover-opacity"></i>
       <i class="fa fa-pinterest-p w3-hover-opacity"></i>
       <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i><br>
+      <span>El uso indevido de los archivos no es nuestra responsabilidad</span> 
     </div>
 </footer>
    
@@ -435,6 +439,6 @@
   }
   </script>
   
-        
+       
     </body>
 </html>

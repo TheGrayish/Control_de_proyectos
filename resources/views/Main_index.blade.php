@@ -73,6 +73,7 @@
         <div class="row">
             <div class="col-12">
                 <h1>Listado de Archivos</h1>
+                <a href="http://localhost:8000" class="btn btn-success float-left">Home Page</a>
                 <a href="{{ route('main.create') }}" class="btn btn-success float-right">Agregar Archivo</a>
             </div>
         </div>

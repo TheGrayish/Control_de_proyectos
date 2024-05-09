@@ -198,7 +198,7 @@
           <div class="w3-container">
             <h3>Abner Yezael Gomez Arellano</h3>
             <p class="w3-opacity">CEO & Founder</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <p>A mamar verga, no hay de otra</p>
             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
           </div>
         </div>
@@ -209,7 +209,7 @@
           <div class="w3-container">
             <h3>José Guadalupe Gutiérrez Navarro</h3>
             <p class="w3-opacity">Art Director</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <p>Una riata pa todo</p>
             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
           </div>
         </div>
@@ -220,7 +220,7 @@
           <div class="w3-container">
             <h3>Kevin Ramsés Ramírez Gómez</h3>
             <p class="w3-opacity">Web Designer</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <p>Listo para culiar</p>
             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
           </div>
         </div>
@@ -231,18 +231,18 @@
           <div class="w3-container">
             <h3>Oscar Gerónimo Murillo Alvarado</h3>
             <p class="w3-opacity">Designer</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <p>No digan verga porque se me antoja y se las chupo</p>
             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
           </div>
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
         <div class="w3-card">
-          <img src="{{ asset('storage/images/anonimo.webp') }}" alt="KEVO" style="width:100%; height: 300px;">
+          <img src="{{ asset('storage/images/Kevo.jpg') }}" alt="KEVO" style="width:100%; height: 300px;">
           <div class="w3-container">
             <h3>Kevin Shalom Herrera Covarrubias</h3>
             <p class="w3-opacity">Designer</p>
-            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+            <p>Mirada  de las mil folladas</p>
             <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
           </div>
         </div>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Detalles del Archivo</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1/1755.png" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;

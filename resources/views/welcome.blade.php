@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
-        <link rel="icon" href="https://cdn-icons-png.freepik.com/512/6700/6700085.png" type="image/x-icon">
+        <title>CuceiHub</title>
+        <link rel="icon" href="https://i.postimg.cc/wxJFkf6K/CUCEIHUB.png" type="image/x-icon">
         
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">

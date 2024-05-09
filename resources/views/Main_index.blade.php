@@ -3,84 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Archivos</title>
 </head>
 
-<style>
-     body {
-        font-family: Arial, sans-serif;
-        background-color: #f6f8fa;
-        margin: 0;
-        padding: 0;
-    }
+    <style>
+        body {
+            background-color: #151414; /* light gray background */
+        }
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: rgb(57, 56, 56);
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        margin-top: 20px;
-    }
+        h1 {
+            color: #fff; /* white text */
+        }
 
-    h1 {
-        color: #333;
-    }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    ul {
-        list-style-type: none;
-        padding: 0;
-    }
+        li {
+            background-color: #444; /* dark gray background */
+            padding: 10px;
+            border-bottom: 1px solid #555; /* dark gray border */
+            cursor: pointer; /* add pointer cursor style */
+        }
 
-    li {
-        margin-bottom: 10px;
-        border-bottom: 1px solid #ddd;
-        padding: 10px 0;
-    }
-    .add-file-button {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-    }
+        li:hover {
+            background-color: #555; /* dark gray hover */
+        }
 
-    .add-file-button {
-        background-color: #2ea44f;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: bold;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        transition: background-color 0.3s ease;
-    }
+        a {
+            color: #fff; /* white text */
+            text-decoration: none;
+        }
 
-    .add-file-button:hover {
-        background-color: #393e3a;
-    }
+        a:hover {
+            color: #ccc; /* light gray hover */
+        }
 
-</style>
+        .btn-success {
+            background-color: #666; /* dark gray button */
+            border-color: #666;
+            color: #fff; /* white text */
+        }
 
+        .btn-success:hover {
+            background-color: #777; /* dark gray hover */
+            border-color: #777;
+        }
 
+        .file-name {
+            display: inline-block; /* make file name inline-block */
+            padding: 5px 10px; /* add some padding */
+            background-color: #555; /* add background color */
+            margin-right: 10px; /* add margin to the right of the file name */
+            border-radius: 5px; /* add border radius */
+            transition: background-color 0.3s ease; /* add transition for a better hover effect */
+        }
 
+        li:hover .file-name {
+            background-color: #555; /* same as the <li> element */
+        }
+    </style>
 
 <body>
-    <h1>Listado de Archivos</h1>
-    <ul>
-        @foreach($archivos as $archivo)
-            <li>
-                {{ $archivo->nombre }}
-                <embed src="{{ asset('storage/images/' . $archivo->archivo) }}" type="application/pdf" width="1000" height="500">
-                    <a href="{{ route('main.show', $archivo->id) }}">Ver</a>
-            </li>
-        @endforeach
-    </ul>
-
-    <a class="add-file-button" href="{{ route('main.create') }}">Agregar Archivo</a>
-
-
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>Listado de Archivos</h1>
+                <a href="{{ route('main.create') }}" class="btn btn-success float-right">Agregar Archivo</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul>
+                    @foreach($archivos as $archivo)
+                        <li>
+                            <a href="{{ route('main.show', $archivo->id) }}">
+                                <span class="file-name">{{ $archivo->nombre }}</span>
+                                <embed src="{{ asset('storage/images/'. $archivo->archivo) }}" type="application/pdf" width="1000" height="500">
+                            </a>
+                        </li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

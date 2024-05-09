@@ -17,7 +17,7 @@
         }
 
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 50px auto;
             background-color: #222222;
             padding: 30px;
@@ -38,6 +38,7 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
             padding: 20px;
             margin-bottom: 20px;
+            text-align: left;
         }
 
         .card-body {
@@ -86,6 +87,11 @@
         .btn-danger:hover {
             background-color: #770000;
         }
+
+        embed {
+            width: 100%;
+            height: 800px; /* Ajusta la altura según tu preferencia */
+        }
     </style>
 </head>
 <body>
@@ -93,7 +99,7 @@
         <h2>Detalles del Archivo</h2>
         <div class="card">
             <div class="card-body">
-                <embed src="{{ asset('storage/images/' . $main->archivo) }}" type="application/pdf" width="1000" height="1000">
+                <embed src="{{ asset('storage/images/' . $main->archivo) }}" type="application/pdf">
                 <p class="card-text">Nombre del Archivo: {{ $main->nombre }}</p>
                 <p class="card-text">Horario: {{ $main->horario }}</p>
                 <p class="card-text">Materia: {{ $main->materia }}</p>
